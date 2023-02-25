@@ -1,0 +1,157 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a xing_jiyuan@163.com, aa, LIC=JDA0P-MBG8M-79ZG1-CCH0W-TK5DN-QRBA2
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.25.2.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DCM.DLL V1.17.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.35.1.0
+ 
+<h2>Project:</h2>
+D:\CubeDocument\all_Shangweiji\H743vit60217\MDK-ARM\h743vit6.uvprojx
+Project File Date:  02/18/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'h743vit6'
+compiling Dataex.c...
+user\Dataex.c(640): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor1.curent = Motor1.curent*0.8 + (((float)Data[0] / 65536) * Vrefint + 0.001 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(640): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor1.curent = Motor1.curent*0.8 + (((float)Data[0] / 65536) * Vrefint + 0.001 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(640): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor1.curent = Motor1.curent*0.8 + (((float)Data[0] / 65536) * Vrefint + 0.001 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(641): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor2.curent = Motor2.curent*0.8 + (((float)Data[1] / 65536) * Vrefint + 0.003 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(641): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor2.curent = Motor2.curent*0.8 + (((float)Data[1] / 65536) * Vrefint + 0.003 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(641): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor2.curent = Motor2.curent*0.8 + (((float)Data[1] / 65536) * Vrefint + 0.003 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(642): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor3.curent = Motor3.curent*0.8 + (((float)Data[2] / 65536) * Vrefint         - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(642): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor3.curent = Motor3.curent*0.8 + (((float)Data[2] / 65536) * Vrefint         - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(643): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor4.curent = Motor4.curent*0.8 + (((float)Data[3] / 65536) * Vrefint + 0.002 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(643): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor4.curent = Motor4.curent*0.8 + (((float)Data[3] / 65536) * Vrefint + 0.002 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(643): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor4.curent = Motor4.curent*0.8 + (((float)Data[3] / 65536) * Vrefint + 0.002 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(644): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor5.curent = Motor5.curent*0.8 + (((float)Data[4] / 65536) * Vrefint         - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(644): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor5.curent = Motor5.curent*0.8 + (((float)Data[4] / 65536) * Vrefint         - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(645): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor6.curent = Motor6.curent*0.8 + (((float)Data[5] / 65536) * Vrefint + 0.002 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(645): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor6.curent = Motor6.curent*0.8 + (((float)Data[5] / 65536) * Vrefint + 0.002 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(645): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Motor6.curent = Motor6.curent*0.8 + (((float)Data[5] / 65536) * Vrefint + 0.002 - 0.5 *Vrefint)*0.2 *1.7857f;
+user\Dataex.c(648): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if((Motor1.curent > 2.8)||(Motor1.curent < -2.8)) Motor1.I_lim_PWM =  Motor1.PWM;  else Motor1.I_lim_PWM = 11999;
+user\Dataex.c(649): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if((Motor2.curent > 2.8)||(Motor2.curent < -2.8)) Motor2.I_lim_PWM =  Motor2.PWM;  else Motor2.I_lim_PWM = 11999;
+user\Dataex.c(650): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if((Motor3.curent > 2.8)||(Motor3.curent < -2.8)) Motor3.I_lim_PWM =  Motor3.PWM;  else Motor3.I_lim_PWM = 11999;
+user\Dataex.c(651): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if((Motor4.curent > 2.8)||(Motor4.curent < -2.8)) Motor4.I_lim_PWM =  Motor4.PWM;  else Motor4.I_lim_PWM = 11999;
+user\Dataex.c(652): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if((Motor5.curent > 2.8)||(Motor5.curent < -2.8)) Motor5.I_lim_PWM =  Motor5.PWM;  else Motor5.I_lim_PWM = 11999;
+user\Dataex.c(653): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if((Motor6.curent > 2.8)||(Motor6.curent < -2.8)) Motor6.I_lim_PWM =  Motor6.PWM;  else Motor6.I_lim_PWM = 11999;
+user\Dataex.c(728): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor1pid.Kp  = 0.001*( (volatile int16_t)(*(data_buf+4)<<8)|*(data_buf+5) );
+user\Dataex.c(729): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor1pid.Ki  = 0.001*( (volatile int16_t)(*(data_buf+6)<<8)|*(data_buf+7) );
+user\Dataex.c(730): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor1pid.Kd  = 0.001*( (volatile int16_t)(*(data_buf+8)<<8)|*(data_buf+9) );
+user\Dataex.c(731): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor2pid.Kp = 0.001*( (volatile int16_t)(*(data_buf+10)<<8)|*(data_buf+11) );
+user\Dataex.c(732): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor2pid.Ki = 0.001*( (volatile int16_t)(*(data_buf+12)<<8)|*(data_buf+13) );
+user\Dataex.c(733): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor2pid.Kd = 0.001*( (volatile int16_t)(*(data_buf+14)<<8)|*(data_buf+15) );
+user\Dataex.c(734): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor3pid.Kp 	= 0.001*( (volatile int16_t)(*(data_buf+16)<<8)|*(data_buf+17) );
+user\Dataex.c(735): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor3pid.Ki 	= 0.001*( (volatile int16_t)(*(data_buf+18)<<8)|*(data_buf+19) );
+user\Dataex.c(736): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor3pid.Kd 	= 0.001*( (volatile int16_t)(*(data_buf+20)<<8)|*(data_buf+21) );
+user\Dataex.c(742): warning:  #191-D: type qualifier is meaningless on cast type
+  			  Motor4pid.Kp  = 0.001*( (volatile int16_t)(*(data_buf+4)<<8)|*(data_buf+5) );
+user\Dataex.c(743): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor4pid.Ki  = 0.001*( (volatile int16_t)(*(data_buf+6)<<8)|*(data_buf+7) );
+user\Dataex.c(744): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor4pid.Kd  = 0.001*( (volatile int16_t)(*(data_buf+8)<<8)|*(data_buf+9) );
+user\Dataex.c(745): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor5pid.Kp = 0.001*( (volatile int16_t)(*(data_buf+10)<<8)|*(data_buf+11) );
+user\Dataex.c(746): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor5pid.Ki = 0.001*( (volatile int16_t)(*(data_buf+12)<<8)|*(data_buf+13) );
+user\Dataex.c(747): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor5pid.Kd = 0.001*( (volatile int16_t)(*(data_buf+14)<<8)|*(data_buf+15) );
+user\Dataex.c(748): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor6pid.Kp 	= 0.001*( (volatile int16_t)(*(data_buf+16)<<8)|*(data_buf+17) );
+user\Dataex.c(749): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor6pid.Ki 	= 0.001*( (volatile int16_t)(*(data_buf+18)<<8)|*(data_buf+19) );
+user\Dataex.c(750): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor6pid.Kd 	= 0.001*( (volatile int16_t)(*(data_buf+20)<<8)|*(data_buf+21) );
+user\Dataex.c(756): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor1pid.U_From_Pc  = ( (volatile int16_t)(*(data_buf+4)<<8)|*(data_buf+5) );
+user\Dataex.c(757): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor2pid.U_From_Pc  = ( (volatile int16_t)(*(data_buf+6)<<8)|*(data_buf+7) );
+user\Dataex.c(758): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor3pid.U_From_Pc  = ( (volatile int16_t)(*(data_buf+8)<<8)|*(data_buf+9) );
+user\Dataex.c(759): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor4pid.U_From_Pc = ( (volatile int16_t)(*(data_buf+10)<<8)|*(data_buf+11) );
+user\Dataex.c(760): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor5pid.U_From_Pc = ( (volatile int16_t)(*(data_buf+12)<<8)|*(data_buf+13) );
+user\Dataex.c(761): warning:  #191-D: type qualifier is meaningless on cast type
+          Motor6pid.U_From_Pc = ( (volatile int16_t)(*(data_buf+14)<<8)|*(data_buf+15) );
+user\Dataex.c(1063): warning:  #111-D: statement is unreachable
+  		break;
+user\Dataex.c(1129): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		Right_Leg.Yaw_z = Right_Leg.Yaw_z*0.7f+Yaw1_z*0.3;
+user\Dataex.c: 48 warnings, 0 errors
+linking...
+Program Size: Code=63084 RO-data=1220 RW-data=844 ZI-data=151300  
+FromELF: creating hex file...
+"h743vit6\h743vit6.axf" - 0 Error(s), 48 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.3.0.pack
+                ARM.CMSIS.5.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32H7xx_DFP.2.8.0.pack
+                Keil.STM32H7xx_DFP.2.8.0
+                STMicroelectronics STM32H7 Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_h743vit6
+  D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include
+  D:\Keil_v5\ARM\PACK\Keil\STM32H7xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.1
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
