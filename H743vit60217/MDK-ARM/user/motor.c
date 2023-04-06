@@ -241,8 +241,8 @@ void Angle_and_Speed_caculate(TIM_TypeDef * TIMx,Motor *Motorx)   //输入电机和用
 	Motorx->angle += angle*0.3f;	
 	
 	speed=Pulse*200*0.000588f;                  //电机的速度计算
-	Motorx->speed *= 0.7f;
-	Motorx->speed += speed*0.3f;	
+	Motorx->speed *= 0.5f;
+	Motorx->speed += speed*0.5f;	
 }
 
 //驱动程序

@@ -39,6 +39,8 @@
 "h743vit6\target.o"
 "h743vit6\fc_pid.o"
 "h743vit6\inv_kine.o"
+"h743vit6\qiankui.o"
+"h743vit6\new_niming.o"
 --library_type=microlib --strict --scatter "h743vit6\h743vit6.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

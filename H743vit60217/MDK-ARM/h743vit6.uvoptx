@@ -183,7 +183,7 @@
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Motor1</ItemText>
+          <ItemText>Motor1,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>6</count>
@@ -193,7 +193,7 @@
         <Ww>
           <count>7</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Motor3</ItemText>
+          <ItemText>Motor3,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>8</count>
@@ -278,7 +278,7 @@
         <Ww>
           <count>24</count>
           <WinNumber>1</WinNumber>
-          <ItemText>AutoKangFu_CiShu</ItemText>
+          <ItemText>AutoKangFu_CiShu,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>25</count>
@@ -289,6 +289,16 @@
           <count>26</count>
           <WinNumber>1</WinNumber>
           <ItemText>Left_InvKine</ItemText>
+        </Ww>
+        <Ww>
+          <count>27</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Position_zeroed_Flag</ItemText>
+        </Ww>
+        <Ww>
+          <count>28</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>data_dma</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
@@ -364,7 +374,7 @@
 
   <Group>
     <GroupName>Application/MDK-ARM</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -901,6 +911,54 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\user\Dataex.h</PathWithFileName>
       <FilenameWithoutPath>Dataex.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>43</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\qiankui.c</PathWithFileName>
+      <FilenameWithoutPath>qiankui.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>44</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\qiankui.h</PathWithFileName>
+      <FilenameWithoutPath>qiankui.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>45</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\newniming.h</PathWithFileName>
+      <FilenameWithoutPath>newniming.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>46</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\new_Niming.c</PathWithFileName>
+      <FilenameWithoutPath>new_Niming.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

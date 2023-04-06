@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H743xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;                                  ../Drivers/STM32H7xx_HAL_Driver/Inc;                                  ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;                                  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include;                                  ../Drivers/CMSIS/Include;                                  .\user</IncludePath>
+              <IncludePath>../Core/Inc;                                       ../Drivers/STM32H7xx_HAL_Driver/Inc;                                       ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;                                       ../Drivers/CMSIS/Device/ST/STM32H7xx/Include;                                       ../Drivers/CMSIS/Include;                                       .\user</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -661,6 +661,26 @@
               <FileName>Dataex.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\user\Dataex.h</FilePath>
+            </File>
+            <File>
+              <FileName>qiankui.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\qiankui.c</FilePath>
+            </File>
+            <File>
+              <FileName>qiankui.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\qiankui.h</FilePath>
+            </File>
+            <File>
+              <FileName>newniming.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\newniming.h</FilePath>
+            </File>
+            <File>
+              <FileName>new_Niming.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\new_Niming.c</FilePath>
             </File>
           </Files>
         </Group>

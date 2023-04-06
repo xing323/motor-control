@@ -90,6 +90,17 @@ void Control_Inc_updata(void)            //控制系统输入输出更新
 	static int Angle_Safe_Value = 700; 
 	static uint16_t folwd_cnt = 0;
 	int PWM1,PWM2,PWM3,PWM4,PWM5,PWM6;
+	static int Insert_value_num = 4; //插值点个数
+	static float M1_Insert_value = 0;
+	
+//	if(Insert_value_num){
+//		M1_Insert_value = (5- Insert_value_num)* (Left_InvKine.angle_M1_d[folwd_cnt+1] - Left_InvKine.angle_M1_d[folwd_cnt]) /(Insert_value_num + 1.0);
+//		Insert_value_num--;
+//	}else
+//	{
+//		M1_Insert_value = 0;
+//		Insert_value_num = 4;
+//	}
 	
 //	Motor1.Target = 1;
 //	Motor2.Target = 0;
@@ -97,22 +108,14 @@ void Control_Inc_updata(void)            //控制系统输入输出更新
 //	Motor4.Target = 600;
 //	Motor5.Target = 0;
 //	Motor6.Target = 600;
-	
-	Motor1.Target =  Left_InvKine.angle_M1_d[folwd_cnt];
-	Motor2.Target =  Left_InvKine.angle_M2_d[folwd_cnt];
-	Motor3.Target = -Left_InvKine.angle_M3_d[folwd_cnt];
+		
+	Motor1.Target =  Left_InvKine.angle_M1_d[folwd_cnt] + M1_Insert_value;
+	Motor2.Target =  Left_InvKine.angle_M2_d[folwd_cnt] ;
+	Motor3.Target = -Left_InvKine.angle_M3_d[folwd_cnt] ;
 	Motor4.Target =  Right_InvKine.angle_M1_d[folwd_cnt];
 	Motor5.Target =  Right_InvKine.angle_M2_d[folwd_cnt];
-	Motor6.Target = -Right_InvKine.angle_M3_d[folwd_cnt++];
+	Motor6.Target = -Right_InvKine.angle_M3_d[folwd_cnt];
 	
-
-  //3000个点为训练1次	
-	if(folwd_cnt> 2999)
-  {
-	    folwd_cnt = 0;
-	    UI.AutoKangFu_CiShu--;
-		  if(!UI.AutoKangFu_CiShu) UI.angle_Clear_Flag = 1;
-	}
 
 	//安全标志位的设立
 	if((Motor1.angle <= Angle_Safe_Value)&&(Motor1.angle >= -Angle_Safe_Value))
@@ -166,7 +169,17 @@ void Control_Inc_updata(void)            //控制系统输入输出更新
 //	printf("motor1:%d,motor3:%d\n\n",TIM12->CCR1,TIM13->CCR1);
 //	printf("motor4:%d,motor6:%d\n\n",TIM14->CCR1,TIM15->CCR2);
 	
-	 time = time+0.001f;
+	 time = time + 0.001*0.2f;
+	 folwd_cnt = (uint16_t)(time *1000);
+	   //3000个点为训练1次	
+		if(folwd_cnt> 2999){
+				folwd_cnt = 0;
+				time      = 0;
+				UI.AutoKangFu_CiShu--;
+				if(!UI.AutoKangFu_CiShu) UI.angle_Clear_Flag = 1;
+		}else{
+			
+		}
 
 	/////******    电机驱动pd控制      *****/ ////////////////
 
@@ -227,4 +240,6 @@ uint8_t angle_Clear(void)
 	return M1 && M2 && M3 && M4 && M5 && M6;
 	
 }
+
+
 

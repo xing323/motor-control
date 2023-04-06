@@ -1,9 +1,6 @@
 #ifndef FC_PID_H
 #define FC_PID_H
 
-
-
-
 #define NB -3
 #define NM -2
 #define NS -1
@@ -42,7 +39,10 @@ float Fuzzy_controller_trimf(float x,float a,float b,float c);
 void Fuzzy_controller_setMf(FC_controller* FC_e,float *mf);
 float Fuzzy_controller_realize(int rule[][7],float e,float de); 
 float limit_Float(float a, float up, float down);
-void Control_FC_update(void);
+void Control_FC_update(uint8_t period_num );
+void FC_PD_Target_update(uint16_t cnt,float time);
+void FC_qiankui_Caculate(void);
+
 
 float plant_Test(float u);
 

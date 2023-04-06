@@ -399,7 +399,7 @@ void ShouDongQuShenZhanShou_Function(int PWM)
   //if((PWM>5000)||(PWM<0))  PWM=0;
 	
 	//¶ÁÈ¡°´¼üÖµ
-	KeyUp_value = HAL_GPIO_ReadPin(KEY_Up_GPIO_Port,KEY_Up_Pin);
+	KeyUp_value   = HAL_GPIO_ReadPin(KEY_Up_GPIO_Port,KEY_Up_Pin);
 	KeyDown_value = HAL_GPIO_ReadPin(KEY_Down_GPIO_Port,KEY_Down_Pin);
   KeyLast_value = HAL_GPIO_ReadPin(KEY_Last_GPIO_Port,KEY_Last_Pin);
 	KeyNext_value = HAL_GPIO_ReadPin(KEY_Next_GPIO_Port,KEY_Next_Pin);

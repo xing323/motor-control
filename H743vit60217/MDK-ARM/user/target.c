@@ -33,7 +33,7 @@ float target_Progress(float t1)
 		float a5 =  -54.2;
 		float b5 =  285.7;
 		float phy = 3.4; 
-    float q1=0;	
+    float q1  = 0;	
 		q1=(float)0.001f*(a0+a1*cos(6.283f*t1+phy)+b1*sin(6.283f*t1+phy)+a2*cos(6.283f*2*t1+phy)+b2*sin(6.283f*2*t1+phy)+a3*cos(6.283f*3*t1+phy)+b3*sin(6.283f*3*t1+phy)+a4*cos(6.283f*4*t1+phy)+b4*sin(6.283f*4*t1+phy)+a5*cos(6.283f*5*t1+phy)+b5*sin(6.283f*5*t1+phy));
     return q1;
 }
@@ -90,7 +90,7 @@ void motor_Angle_d_Caculate(float time,Inv_Kine* leg, int flag)
 				leg->angle_M3_d[i] = 57.2958f* 20* leg->theta3;
 			}
 			break;
-		case 3:
+		case 6:
 			//三个方向同时运动
 			for(i=0;i<time*1000;i++)
 			{
@@ -104,23 +104,20 @@ void motor_Angle_d_Caculate(float time,Inv_Kine* leg, int flag)
 				leg->angle_M3_d[i] = 57.2958f* 20* leg->theta3;
 			}
 			break;
-		case 4:
+		case 3:
 			for(i=0;i<time*1000;i++)
 			{
 				t = 0.001*i;
-				alpha = 0.0174533f* target_Progress(t);//0.0174533为Π/180的值，化为弧度
-				beta =  0;
-				gamma = 0;
-				Inv_Kine_Caculator(alpha, beta, gamma, leg);
-				leg->angle_M1_d[i] = 57.2958f* 20* leg->theta1;
-				leg->angle_M2_d[i] = 57.2958f* 20* leg->theta2;
-				leg->angle_M3_d[i] = 57.2958f* 20* leg->theta3;
+				leg->angle_M1_d[i] = 20* target_Progress(t);
+				leg->angle_M2_d[i] = 0;
+				leg->angle_M3_d[i] = 20* target_Progress(t);
 			}
 	}
-	//最后一个值赋值为0
-			leg->angle_M1_d[(uint16_t)(time*1000-1)] = 0;
-			leg->angle_M2_d[(uint16_t)(time*1000-1)] = 0;
-			leg->angle_M3_d[(uint16_t)(time*1000-1)] = 0;
+	    //最后一个值赋值为0
+//			leg->angle_M1_d[(uint16_t)(time*1000-1)] = 0;
+//			leg->angle_M2_d[(uint16_t)(time*1000-1)] = 0;
+//			leg->angle_M3_d[(uint16_t)(time*1000-1)] = 0;
+	    //inv_To_PC();
 }
 
 //传输数据到电脑上看数据生成对不对,数据生成之后调用这个函数把数据发电脑上分析

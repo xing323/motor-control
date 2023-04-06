@@ -48,3 +48,4 @@ h743vit6\dataex.o: user\Ctrl_schedule.h
 h743vit6\dataex.o: user\key.h
 h743vit6\dataex.o: user\FC_PID.h
 h743vit6\dataex.o: user\Inv_Kine.h
+h743vit6\dataex.o: user\qiankui.h

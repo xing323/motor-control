@@ -53,3 +53,4 @@ h743vit6\main.o: .\user\Ctrl_schedule.h
 h743vit6\main.o: .\user\FC_PID.h
 h743vit6\main.o: .\user\Inv_Kine.h
 h743vit6\main.o: .\user\target.h
+h743vit6\main.o: .\user\qiankui.h

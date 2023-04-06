@@ -45,3 +45,5 @@ h743vit6\fc_pid.o: user\Dataex.h
 h743vit6\fc_pid.o: user\control.h
 h743vit6\fc_pid.o: user\target.h
 h743vit6\fc_pid.o: user\Inv_Kine.h
+h743vit6\fc_pid.o: user\qiankui.h
+h743vit6\fc_pid.o: ../Core/Inc/usart.h

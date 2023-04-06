@@ -29,7 +29,7 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+//int fputc(int c, FILE *f);
 /* USER CODE END Includes */
 
 extern UART_HandleTypeDef huart4;

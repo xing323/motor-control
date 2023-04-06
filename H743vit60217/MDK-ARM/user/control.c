@@ -36,9 +36,16 @@ void Pid_Set(control_pid * Motorx,float Kp,float Ki,float Kd)
 //PID计算过程，返回PWM值
 float Motor_x_control_pid_PWM(control_pid * Motorx, float PV,float CV)
 {
-	Motorx->err=PV-CV;
+	Motorx->err=PV-CV;	
 	Motorx->d_err=Motorx->err-Motorx->last_err;
-	
+		if((Motorx->err<1)&&(Motorx->err>0))
+	{
+		Motorx->err = Motorx->err*Motorx->err;
+	}
+	if((Motorx->err<0)&&(Motorx->err>-1))
+	{
+		Motorx->err = -Motorx->err*Motorx->err;
+	}
 	if(((Motorx->err)<2)&&(Motorx->err>-2))
 	{
 		Motorx->I_err+=Motorx->err;

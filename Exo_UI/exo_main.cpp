@@ -85,9 +85,10 @@ void Exo_Main::on_Btn_Open_Serial_clicked()
         //串口数据接收
         connect(serialport,&QSerialPort::readyRead,[=](){
                 //    qDebug()<<"readyReadOK";
-            qDebug()<<read_Data(receive_Data);
-            //数据协议处理
-            data_PreProsess((uint8_t* )receive_Data, 29);
+            if(read_Data(receive_Data)){
+                //数据协议处理
+
+            }
             //SaveDataToCSVFile(angle1);
             //custom_Real_Plot();
         });
@@ -120,20 +121,30 @@ int Exo_Main::read_Data(char *buffer)
     {
         int n           = serialport->bytesAvailable();
         serialData_buff.append(serialport->readAll());
-        if(serialData_buff.size() >= 29)
-        {
-            qDebug()<<"拷贝地址为："<<memcpy(buffer, serialData_buff, 29);
-            serialData_buff.remove(0,29);
-            qDebug()<<"数组长度为："<<serialData_buff.size();
+        //qDebug()<<"处理前数组长度为："<<serialData_buff.size();
+        while(serialData_buff.size() >= 29){
+            qDebug()<<"前两位数据为："<<serialData_buff.mid(0,2).toHex();
+            if(serialData_buff.mid(0,2).toHex() == "aaaa")
+            {
+                qDebug()<<"拷贝地址为："<<memcpy(buffer, serialData_buff, 29);
+                serialData_buff.remove(0,29);
+                data_PreProsess((uint8_t* )receive_Data, 29);
+            }
+            else
+                serialData_buff.remove(0,2);
+            //qDebug()<<serialData_buff.toHex();
+            //qDebug()<<"处理后数组长度为："<<serialData_buff.size();
+            return 1;
         }
 
-        //serialData_buff = serialData_buff.trimmed(); //返回一个字节数组，该数组从开始和结束处移除空白。
-//        qDebug()<<"lengh_array:"<<lengh_array<<"lengh_buffer:"<<lengh_buffer;
-//        qDebug()<<buffer[0]<<buffer[1]<<len<<"bytesAvailable"<<n;
-        return n;
-    }else
+    }
+
+    //serialData_buff = serialData_buff.trimmed(); //返回一个字节数组，该数组从开始和结束处移除空白。
+    //        qDebug()<<"lengh_array:"<<lengh_array<<"lengh_buffer:"<<lengh_buffer;
+    //        qDebug()<<buffer[0]<<buffer[1]<<len<<"bytesAvailable"<<n;
+    else
     {
-    return -1;
+        return 0;
     }
 
 //    QByteArray receive_Buff,buff;
@@ -181,10 +192,11 @@ void Exo_Main::data_PreProsess(uint8_t *receive_Buff, uint8_t length)
         {
             for(int i=0;i<4;i++)
             {
-                data_trans[4-i] = receive_Buff[i+3+4*j];
+                //data_trans[4-i] = receive_Buff[i+3+4*j];
+                data_trans[3-i] = receive_Buff[i+4+4*j];
             }
             angle1[j] = *((float *)data_trans);
-            //qDebug()<<"angle"<<j<<":"<<angle1[j];
+            qDebug()<<"angle"<<j<<":"<<angle1[j];
         }
         ui->lcdNum_M1->display((int16_t)angle1[0]/20  );
         ui->lcdNum_M2->display((int16_t)angle1[1]/20  );
@@ -200,7 +212,8 @@ void Exo_Main::data_PreProsess(uint8_t *receive_Buff, uint8_t length)
         {
             for(int i=0;i<4;i++)
             {
-                data_trans[4-i] = receive_Buff[i+3+4*j];
+                //data_trans[4-i] = receive_Buff[i+3+4*j];
+                data_trans[3-i] = receive_Buff[i+4+4*j];
             }
             curent[j] = *((float *)data_trans);
             qDebug()<<"curent"<<j<<":"<<curent[j];

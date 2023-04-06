@@ -37,7 +37,7 @@ typedef struct
 }UI_Flag;
 
 extern UI_Flag UI;
-extern dt_flag_t f;
+extern dt_flag_t f;                 
 //九轴传感器结构体
 typedef struct 
 {
@@ -64,5 +64,6 @@ void Current_updata(void);
 void Send_Data2NiMing(void);
 void Motor_Enable(uint8_t data);
 void Check_Back(void);
+void Send_Data2New_NiMing(void);
 
 #endif
